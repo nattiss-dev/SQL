@@ -14,9 +14,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .header h1{font-size:17px;font-weight:600;flex:1}
 .hbadge{background:rgba(255,255,255,.2);font-size:11px;padding:3px 9px;border-radius:4px}
 .pbar{height:3px;background:rgba(255,255,255,.15)}
-.pfill{height:100%;background:#5DCAA5;transition:width .4s}
+.pfill{height:100%;background:#9FE1CB;transition:width .4s}
 .layout{display:flex;min-height:calc(100vh - 58px)}
-.sidebar{width:230px;min-width:230px;background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;position:sticky;top:58px;height:calc(100vh - 58px)}
+.sidebar{width:240px;min-width:240px;background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;position:sticky;top:58px;height:calc(100vh - 58px)}
 .sb-inner{padding:8px}
 .mod-label{font-size:10px;font-weight:600;color:var(--text-muted);padding:10px 8px 3px;text-transform:uppercase;letter-spacing:.06em}
 .lbtn{display:block;width:100%;text-align:left;background:none;border:none;border-radius:6px;padding:8px 10px;font-size:13px;color:var(--text-sec);cursor:pointer;line-height:1.4;transition:background .12s}
@@ -25,25 +25,31 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .lbtn .num{font-size:10px;color:var(--text-muted);display:block;margin-bottom:1px}
 .lbtn.active .num{color:var(--blue);opacity:.7}
 .chk{float:right;color:var(--teal-mid);font-size:12px}
-.main{flex:1;min-width:0;padding:18px;max-width:820px;margin:0 auto}
+.main{flex:1;min-width:0;padding:18px;max-width:860px;margin:0 auto}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:14px}
 .card-top{padding:16px 18px 0}
 .ltitle{font-size:19px;font-weight:600;margin-bottom:5px}
 .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500;margin-bottom:10px}
 .bmed{background:var(--amber-light);color:var(--amber)}
 .badv{background:var(--red-light);color:var(--red)}
-.tabs{display:flex;border-bottom:1px solid var(--border);padding:0 18px}
-.tab{background:none;border:none;border-bottom:2px solid transparent;padding:9px 13px;font-size:13px;color:var(--text-muted);cursor:pointer;font-family:inherit;transition:all .12s;display:flex;align-items:center;gap:5px}
+.tabs{display:flex;border-bottom:1px solid var(--border);padding:0 18px;gap:2px}
+.tab{background:none;border:none;border-bottom:2px solid transparent;padding:9px 13px;font-size:13px;color:var(--text-muted);cursor:pointer;font-family:inherit;transition:all .12s}
 .tab.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:500}
 .tcontent{padding:16px 18px}
 .btext{font-size:14px;color:var(--text-sec);line-height:1.75;margin-bottom:12px}
 .btext b{color:var(--text);font-weight:500}
 .btext code{font-family:var(--mono);font-size:12px;background:var(--surface-0);padding:1px 5px;border-radius:3px;color:var(--blue)}
-.sqlblock{background:var(--surface-0);border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin:10px 0;font-family:var(--mono);font-size:13px;line-height:1.8;overflow-x:auto;white-space:pre}
-.kw{color:#7c5cfc;font-weight:600}.fn{color:#0f6e56;font-weight:500}.str{color:#ba7517}.cmt{color:var(--text-muted);font-style:italic}
-.exbox{background:var(--teal-light);border:1px solid #9FE1CB;border-radius:8px;padding:13px 15px;margin-bottom:12px;font-size:13px;color:var(--teal);line-height:1.7}
-.exbox code{font-family:var(--mono);font-size:11px;background:rgba(0,0,0,.06);padding:1px 4px;border-radius:3px;display:block;margin-top:6px;white-space:pre-wrap;word-break:break-all}
+.sqlblock{background:var(--surface-0);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:13px 15px;margin:10px 0;font-family:var(--mono);font-size:13px;line-height:1.8;overflow-x:auto;white-space:pre}
+.kw{color:#7c5cfc;font-weight:600}.fn{color:#0f6e56;font-weight:500}.st{color:#ba7517}.cm{color:var(--text-muted);font-style:italic}
+.exbox{background:var(--blue-light);border:1px solid #A8CDEF;border-radius:8px;padding:13px 15px;margin-bottom:10px;font-size:13px;color:var(--blue);line-height:1.7}
 .spill{display:inline-block;font-size:11px;font-family:var(--mono);background:var(--surface-0);border:1px solid var(--border);border-radius:4px;padding:2px 7px;margin:2px;color:var(--text-sec)}
+/* Exercise nav */
+.ex-nav{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.ex-dot{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--border);background:none;font-size:12px;font-weight:500;cursor:pointer;color:var(--text-muted);transition:all .12s;display:flex;align-items:center;justify-content:center;font-family:inherit}
+.ex-dot:hover{border-color:var(--blue);color:var(--blue)}
+.ex-dot.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.ex-dot.done{background:var(--teal-light);color:var(--teal-mid);border-color:var(--teal-mid)}
+.ex-label{font-size:12px;color:var(--text-muted);margin-left:4px}
 .ecard{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:14px}
 textarea{width:100%;font-family:var(--mono);font-size:13px;background:var(--surface-0);border:1px solid var(--border);border-radius:8px;padding:11px;color:var(--text);resize:vertical;min-height:110px;line-height:1.7;outline:none;transition:border .12s}
 textarea:focus{border-color:var(--blue)}
@@ -60,16 +66,16 @@ textarea:focus{border-color:var(--blue)}
 .navtxt{font-size:12px;color:var(--text-muted)}
 .mobile-strip{display:none;gap:6px;padding:8px 12px;background:var(--surface);border-bottom:1px solid var(--border);overflow-x:auto;position:sticky;top:58px;z-index:90;scrollbar-width:none}
 .mobile-strip::-webkit-scrollbar{display:none}
-.mchip{white-space:nowrap;border:1px solid var(--border);border-radius:20px;padding:5px 11px;font-size:12px;color:var(--text-sec);background:none;cursor:pointer}
+.mchip{white-space:nowrap;border:1px solid var(--border);border-radius:20px;padding:5px 11px;font-size:12px;color:var(--text-sec);background:none;cursor:pointer;font-family:inherit}
 .mchip.active{background:var(--blue-light);border-color:var(--blue);color:var(--blue);font-weight:500}
 @media(max-width:640px){.sidebar{display:none}.main{padding:10px}.mobile-strip{display:flex}.card-top{padding:13px 13px 0}.tabs{padding:0 13px}.tcontent{padding:13px}.sqlblock{font-size:12px;padding:10px}.ltitle{font-size:17px}.ecard{padding:12px}}
 </style>
 </head>
 <body>
 <div class="header">
-  <i class="ti ti-database" style="font-size:21px" aria-hidden="true"></i>
-  <h1>SQL Interactivo</h1>
-  <span class="hbadge" id="pbadge">0 / 12</span>
+  <i class="ti ti-database" style="font-size:22px" aria-hidden="true"></i>
+  <h1>SQL Interactivo — Medio a Avanzado</h1>
+  <span class="hbadge" id="pbadge">0%</span>
 </div>
 <div class="pbar"><div class="pfill" id="pfill" style="width:0%"></div></div>
 <div class="mobile-strip" id="mstrip"></div>
@@ -82,8 +88,8 @@ textarea:focus{border-color:var(--blue)}
         <span class="badge" id="lbadge"></span>
       </div>
       <div class="tabs">
-        <button class="tab active" onclick="switchTab('learn')"><i class="ti ti-book" aria-hidden="true"></i>Lección</button>
-        <button class="tab" onclick="switchTab('exercise')"><i class="ti ti-pencil" aria-hidden="true"></i>Ejercicio</button>
+        <button class="tab active" onclick="switchTab('learn')">📖 Lección</button>
+        <button class="tab" onclick="switchTab('exercise')">✏️ Ejercicios</button>
       </div>
       <div class="tcontent" id="tcontent"></div>
     </div>
@@ -95,100 +101,448 @@ textarea:focus{border-color:var(--blue)}
       <div class="brow">
         <button class="btn brun" onclick="runQuery()"><i class="ti ti-player-play" aria-hidden="true"></i>Ejecutar</button>
         <button class="btn bhint" onclick="showHint()"><i class="ti ti-bulb" aria-hidden="true"></i>Pista</button>
-        <button class="btn bnext" onclick="nextLesson()">Siguiente<i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+        <button class="btn bnext" id="btn-next" onclick="nextAction()">Siguiente <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
       </div>
       <div id="rarea"></div>
     </div>
     <div class="navrow">
-      <button class="btn" onclick="prevLesson()" id="bprev"><i class="ti ti-arrow-left" aria-hidden="true"></i>Anterior</button>
+      <button class="btn" onclick="prevLesson()" id="bprev"><i class="ti ti-arrow-left" aria-hidden="true"></i>Anterior tema</button>
       <span class="navtxt" id="navtxt"></span>
-      <button class="btn" onclick="nextLesson()">Siguiente<i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+      <button class="btn" onclick="nextLesson()">Siguiente tema <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
     </div>
   </div>
 </div>
 <script>
-const LS=[
-{id:0,title:"JOINs avanzados",badge:"med",mod:"Módulo 1 — JOINs",theory:`Los <b>JOINs</b> combinan datos de múltiples tablas. Más allá del INNER JOIN básico, existen variantes esenciales.<br><br><b>INNER JOIN</b> — solo filas con coincidencia en ambas tablas.<br><b>LEFT JOIN</b> — todas las filas de la tabla izquierda, NULL donde no hay coincidencia.<br><b>RIGHT JOIN</b> — inverso del LEFT JOIN.<br><b>FULL OUTER JOIN</b> — todas las filas de ambas tablas.<br><b>SELF JOIN</b> — una tabla se une consigo misma (jerarquías).<br><b>CROSS JOIN</b> — producto cartesiano de todas las combinaciones.`,ex:`<span class="kw">SELECT</span> e.nombre, e.salario, d.nombre <span class="kw">AS</span> departamento\n<span class="kw">FROM</span> empleados e\n<span class="kw">LEFT JOIN</span> departamentos d <span class="kw">ON</span> e.dept_id = d.id\n\n<span class="cmt">-- SELF JOIN: empleado y su manager</span>\n<span class="kw">SELECT</span> e.nombre, m.nombre <span class="kw">AS</span> manager\n<span class="kw">FROM</span> empleados e\n<span class="kw">LEFT JOIN</span> empleados m <span class="kw">ON</span> e.manager_id = m.id`,exercise:`Tenés las tablas: <span class="spill">clientes(id, nombre, ciudad)</span> <span class="spill">pedidos(id, cliente_id, total, fecha)</span><br><br>Mostrá el nombre de <b>todos los clientes</b> con la cantidad de pedidos que tienen. Los clientes sin pedidos deben aparecer con 0.`,kw:["left join","count","group by"],hint:"Usá LEFT JOIN para incluir clientes sin pedidos, y COUNT() con GROUP BY para contar por cliente.",ok:"Perfecto! LEFT JOIN incluye registros sin coincidencia. COUNT(*) cuenta filas, GROUP BY agrupa por cliente."},
-{id:1,title:"Subqueries",badge:"med",mod:"Módulo 1 — JOINs",theory:`Una <b>subquery</b> es una consulta dentro de otra. Pueden ir en SELECT, FROM, WHERE o HAVING.<br><br><b>Escalar</b>: devuelve un único valor.<br><b>De lista</b>: devuelve una columna (para IN, NOT IN).<br><b>Correlacionada</b>: referencia la query externa — se ejecuta por cada fila.<br><b>En FROM</b>: se trata como tabla temporal.<br><br>Las subqueries son poderosas pero a veces los JOINs son más eficientes.`,ex:`<span class="cmt">-- Empleados con salario mayor al promedio</span>\n<span class="kw">SELECT</span> nombre, salario\n<span class="kw">FROM</span> empleados\n<span class="kw">WHERE</span> salario > (<span class="kw">SELECT</span> <span class="fn">AVG</span>(salario) <span class="kw">FROM</span> empleados)\n\n<span class="cmt">-- Subquery correlacionada</span>\n<span class="kw">SELECT</span> nombre,\n  (<span class="kw">SELECT</span> <span class="fn">COUNT</span>(*) <span class="kw">FROM</span> pedidos p\n   <span class="kw">WHERE</span> p.cliente_id = c.id) <span class="kw">AS</span> total_pedidos\n<span class="kw">FROM</span> clientes c`,exercise:`Tabla: <span class="spill">productos(id, nombre, precio, categoria)</span><br><br>Devolvé los productos cuyo precio sea mayor al precio promedio de su propia categoría.`,kw:["where","select","avg","categoria"],hint:"Necesitás una subquery correlacionada en WHERE que calcule AVG(precio) filtrando por la misma categoría del producto externo.",ok:"Excelente! La subquery correlacionada referencia la tabla externa filtrando por la misma categoría para comparar con su promedio."},
-{id:2,title:"CTEs (WITH)",badge:"med",mod:"Módulo 2 — CTEs y Window",theory:`Los <b>CTEs</b> son consultas temporales nombradas que mejoran la legibilidad. Se definen con <b>WITH</b>.<br><br>Ventajas:<br>• Más legibles y fáciles de mantener.<br>• Se pueden referenciar múltiples veces.<br>• Permiten CTEs encadenadas.<br>• Las CTEs recursivas recorren jerarquías.<br><br>No tienen costo adicional de performance frente a subqueries en la mayoría de los motores.`,ex:`<span class="kw">WITH</span> ventas_mensuales <span class="kw">AS</span> (\n  <span class="kw">SELECT</span>\n    <span class="fn">DATE_TRUNC</span>(<span class="str">'month'</span>, fecha) <span class="kw">AS</span> mes,\n    <span class="fn">SUM</span>(total) <span class="kw">AS</span> total_mes\n  <span class="kw">FROM</span> pedidos\n  <span class="kw">GROUP BY</span> 1\n),\ntop_meses <span class="kw">AS</span> (\n  <span class="kw">SELECT</span> * <span class="kw">FROM</span> ventas_mensuales\n  <span class="kw">WHERE</span> total_mes > 100000\n)\n<span class="kw">SELECT</span> * <span class="kw">FROM</span> top_meses\n<span class="kw">ORDER BY</span> total_mes <span class="kw">DESC</span>`,exercise:`Tablas: <span class="spill">empleados(id, nombre, dept_id, salario)</span> <span class="spill">departamentos(id, nombre)</span><br><br>Usando CTEs, calculá el salario promedio por departamento y mostrá solo los que superan $60.000.`,kw:["with","avg","group by"],hint:"Creá un CTE que calcule AVG(salario) GROUP BY dept_id, luego JOIN con departamentos y filtrá los que superan 60000.",ok:"Muy bien! WITH ... AS (...) organiza el SQL en etapas lógicas. Podés encadenar varios CTEs separados por coma."},
-{id:3,title:"Window Functions — Básico",badge:"med",mod:"Módulo 2 — CTEs y Window",theory:`Las <b>Window Functions</b> calculan sobre filas relacionadas sin colapsar el resultado con GROUP BY.<br><br>Sintaxis: <code>funcion() OVER (PARTITION BY col ORDER BY col)</code><br><br><b>PARTITION BY</b>: divide en grupos (ventanas). Si se omite, todas las filas son una ventana.<br><b>ORDER BY</b>: ordena dentro de cada ventana.<br><br>Funciones: <code>ROW_NUMBER()</code>, <code>RANK()</code>, <code>DENSE_RANK()</code>, <code>SUM()</code>, <code>AVG()</code>, <code>LAG()</code>, <code>LEAD()</code>.`,ex:`<span class="cmt">-- Ranking de ventas por región</span>\n<span class="kw">SELECT</span>\n  vendedor, region, monto,\n  <span class="fn">RANK</span>() <span class="kw">OVER</span> (\n    <span class="kw">PARTITION BY</span> region\n    <span class="kw">ORDER BY</span> monto <span class="kw">DESC</span>\n  ) <span class="kw">AS</span> ranking,\n  <span class="fn">SUM</span>(monto) <span class="kw">OVER</span> (<span class="kw">PARTITION BY</span> region) <span class="kw">AS</span> total_region\n<span class="kw">FROM</span> ventas`,exercise:`Tabla: <span class="spill">ventas(vendedor, region, monto, mes)</span><br><br>Mostrá para cada vendedor su monto de ventas y su ranking dentro de su región (1 = mayor vendedor). Usá RANK().`,kw:["rank","over","partition by","order by"],hint:"RANK() OVER (PARTITION BY region ORDER BY monto DESC) asigna el ranking dentro de cada región. No necesitás GROUP BY.",ok:"Excelente! RANK() asigna el mismo número a empates y salta el siguiente (1,1,3). DENSE_RANK() no salta (1,1,2). ROW_NUMBER() da números únicos."},
-{id:4,title:"Window — LAG y LEAD",badge:"adv",mod:"Módulo 2 — CTEs y Window",theory:`<b>LAG()</b> y <b>LEAD()</b> acceden a filas anteriores o siguientes sin necesidad de un self-join.<br><br><code>LAG(col, n, default)</code> → valor de n filas hacia atrás.<br><code>LEAD(col, n, default)</code> → valor de n filas hacia adelante.<br><br>Útiles para:<br>• Variaciones mes a mes (MoM).<br>• Tiempo entre eventos.<br>• Comparar con el período anterior.<br><br>El tercer parámetro es el valor cuando no hay fila anterior/siguiente.`,ex:`<span class="cmt">-- Variación de ventas mes a mes</span>\n<span class="kw">SELECT</span>\n  mes, ventas,\n  <span class="fn">LAG</span>(ventas) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes) <span class="kw">AS</span> mes_anterior,\n  ventas - <span class="fn">LAG</span>(ventas) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes) <span class="kw">AS</span> variacion,\n  <span class="fn">ROUND</span>(\n    (ventas - <span class="fn">LAG</span>(ventas) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes)) * 100.0\n    / <span class="fn">LAG</span>(ventas) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes), 2\n  ) <span class="kw">AS</span> variacion_pct\n<span class="kw">FROM</span> ventas_mensuales`,exercise:`Tabla: <span class="spill">metricas(producto, mes, revenue)</span><br><br>Calculá el revenue actual, el del mes anterior (LAG) y el crecimiento porcentual MoM por producto. Mostrá solo los registros con crecimiento mayor al 10%.`,kw:["lag","over","partition by","order by"],hint:"Usá LAG(revenue) OVER (PARTITION BY producto ORDER BY mes). Para filtrar el % usá un CTE y filtrá en la query externa.",ok:"Perfecto! Combinando CTEs con LAG() podés hacer análisis de tendencias muy potentes."},
-{id:5,title:"HAVING vs WHERE",badge:"med",mod:"Módulo 3 — Agregaciones",theory:`<b>WHERE</b> filtra filas <i>antes</i> de agregar. <b>HAVING</b> filtra <i>después</i> de agregar.<br><br>Orden de ejecución:<br>1. FROM → 2. WHERE → 3. GROUP BY → 4. Agregaciones → 5. HAVING → 6. SELECT → 7. ORDER BY → 8. LIMIT<br><br><b>Regla:</b> si el filtro usa una función de agregación (SUM, COUNT, AVG...) → HAVING. Si filtra columnas normales → WHERE.`,ex:`<span class="cmt">-- WHERE filtra ANTES de agrupar</span>\n<span class="kw">SELECT</span> categoria, <span class="fn">COUNT</span>(*) <span class="kw">AS</span> total\n<span class="kw">FROM</span> productos\n<span class="kw">WHERE</span> precio > 100\n<span class="kw">GROUP BY</span> categoria\n<span class="kw">HAVING</span> <span class="fn">COUNT</span>(*) > 5`,exercise:`Tabla: <span class="spill">ordenes(cliente_id, producto, monto, fecha)</span><br><br>Encontrá clientes que en 2024 hicieron más de 5 compras Y cuyo monto promedio supera $500. Mostrá cliente_id, cantidad y promedio.`,kw:["having","group by","count","avg"],hint:"WHERE filtra por 2024. GROUP BY cliente_id. HAVING usa COUNT(*) > 5 AND AVG(monto) > 500.",ok:"Correcto! WHERE filtra las filas. GROUP BY agrupa. HAVING filtra los grupos que cumplen las condiciones de agregación."},
-{id:6,title:"Funciones de fecha",badge:"med",mod:"Módulo 3 — Agregaciones",theory:`Las funciones de fecha varían según el motor, pero los conceptos son consistentes.<br><br><b>PostgreSQL / BigQuery:</b><br><code>DATE_TRUNC('month', fecha)</code> — trunca al inicio del mes.<br><code>EXTRACT(year FROM fecha)</code> — extrae el año.<br><code>fecha + INTERVAL '7 days'</code><br><br><b>MySQL:</b><br><code>DATE_FORMAT(fecha, '%Y-%m')</code><br><code>DATEDIFF(fecha1, fecha2)</code><br><br><b>SQL Server:</b><br><code>DATEPART(month, fecha)</code><br><code>DATEDIFF(day, fecha1, fecha2)</code>`,ex:`<span class="cmt">-- Ventas por mes (PostgreSQL)</span>\n<span class="kw">SELECT</span>\n  <span class="fn">DATE_TRUNC</span>(<span class="str">'month'</span>, fecha) <span class="kw">AS</span> mes,\n  <span class="fn">COUNT</span>(*) <span class="kw">AS</span> pedidos,\n  <span class="fn">SUM</span>(total) <span class="kw">AS</span> revenue\n<span class="kw">FROM</span> pedidos\n<span class="kw">WHERE</span> fecha >= <span class="str">'2024-01-01'</span>\n  <span class="kw">AND</span> fecha < <span class="str">'2025-01-01'</span>\n<span class="kw">GROUP BY</span> 1\n<span class="kw">ORDER BY</span> 1`,exercise:`Tabla: <span class="spill">sesiones(usuario_id, inicio, fin, plataforma)</span><br><br>Calculá la duración promedio en minutos por plataforma, solo para sesiones del Q4 2024. Mostrá solo plataformas con promedio mayor a 10 minutos.`,kw:["avg","group by","having","where"],hint:"Calculá la duración como diferencia entre fin e inicio. Filtrá por fecha en WHERE. GROUP BY plataforma y HAVING AVG > 10.",ok:"Muy bien! Recordá usar rangos de fecha con >= y < para incluir/excluir correctamente."},
-{id:7,title:"CASE WHEN",badge:"med",mod:"Módulo 3 — Agregaciones",theory:`<b>CASE WHEN</b> es el if/else del SQL. Crea columnas condicionales.<br><br>Usos comunes:<br>• Crear categorías o segmentos numéricos.<br>• Pivotear datos (filas en columnas).<br>• Contar condicionalmente: <code>COUNT(CASE WHEN ... THEN 1 END)</code>.<br>• Asignar pesos o scores.`,ex:`<span class="kw">SELECT</span> cliente_id, total_compras,\n  <span class="kw">CASE</span>\n    <span class="kw">WHEN</span> total_compras >= 10000 <span class="kw">THEN</span> <span class="str">'VIP'</span>\n    <span class="kw">WHEN</span> total_compras >= 1000  <span class="kw">THEN</span> <span class="str">'Premium'</span>\n    <span class="kw">WHEN</span> total_compras >= 100   <span class="kw">THEN</span> <span class="str">'Regular'</span>\n    <span class="kw">ELSE</span> <span class="str">'Nuevo'</span>\n  <span class="kw">END</span> <span class="kw">AS</span> segmento\n<span class="kw">FROM</span> clientes\n\n<span class="cmt">-- Pivot: contar por categoría en columnas</span>\n<span class="kw">SELECT</span> mes,\n  <span class="fn">COUNT</span>(<span class="kw">CASE WHEN</span> cat=<span class="str">'A'</span> <span class="kw">THEN</span> 1 <span class="kw">END</span>) <span class="kw">AS</span> cat_a,\n  <span class="fn">COUNT</span>(<span class="kw">CASE WHEN</span> cat=<span class="str">'B'</span> <span class="kw">THEN</span> 1 <span class="kw">END</span>) <span class="kw">AS</span> cat_b\n<span class="kw">FROM</span> ventas <span class="kw">GROUP BY</span> mes`,exercise:`Tabla: <span class="spill">empleados(id, nombre, salario)</span><br><br>Clasificá a cada empleado: 'Junior' (< $40k), 'Mid' ($40k-$80k), 'Senior' ($80k-$120k), 'Lead' (> $120k). Luego contá cuántos hay en cada banda.`,kw:["case when","group by","count"],hint:"Usá CASE WHEN en el SELECT para crear 'banda'. Luego envolvé en un CTE y hacé GROUP BY banda, COUNT(*).",ok:"Excelente! CASE WHEN es una de las herramientas más usadas en SQL analítico. GROUP BY + COUNT sobre una columna CASE es el patrón estándar de segmentación."},
-{id:8,title:"Índices y performance",badge:"adv",mod:"Módulo 4 — Performance",theory:`Los <b>índices</b> aceleran búsquedas sin cambiar los datos.<br><br><b>Tipos:</b><br>• <b>B-Tree</b>: el más común. Para =, >, <, BETWEEN, ORDER BY.<br>• <b>Hash</b>: solo para igualdad (=).<br>• <b>GIN/GiST</b>: para arrays, JSON, texto completo (PostgreSQL).<br>• <b>Compuesto</b>: múltiples columnas. El orden importa.<br><br><b>Cuándo NO ayuda:</b><br>• Tablas pequeñas.<br>• Baja cardinalidad (pocos valores distintos).<br>• Funciones sobre la columna indexada.<br>• INSERTs/UPDATEs muy frecuentes.`,ex:`<span class="kw">CREATE INDEX</span> idx_pedidos_cliente\n  <span class="kw">ON</span> pedidos(cliente_id);\n\n<span class="kw">CREATE INDEX</span> idx_pedidos_fecha_estado\n  <span class="kw">ON</span> pedidos(fecha, estado);\n\n<span class="cmt">-- EXPLAIN ANALYZE: ver el plan de ejecución</span>\n<span class="kw">EXPLAIN ANALYZE</span>\n<span class="kw">SELECT</span> * <span class="kw">FROM</span> pedidos\n<span class="kw">WHERE</span> cliente_id = 123\n\n<span class="cmt">-- MALO: función anula el índice</span>\n<span class="kw">WHERE</span> <span class="fn">UPPER</span>(nombre) = <span class="str">'JUAN'</span>\n<span class="cmt">-- BIEN: comparación directa</span>\n<span class="kw">WHERE</span> nombre = <span class="str">'juan'</span>`,exercise:`Tabla: <span class="spill">eventos(id, usuario_id, tipo, fecha, payload JSONB)</span> con 50 millones de filas.<br><br>Las queries más frecuentes filtran por usuario_id y fecha. Escribí los CREATE INDEX apropiados y explicá el orden de columnas elegido.`,kw:["create index","on","usuario_id","fecha"],hint:"Un índice compuesto (usuario_id, fecha) sirve para queries con solo usuario_id (usa el prefijo) y para queries con ambas. La columna de igualdad va primero.",ok:"Correcto! El índice (usuario_id, fecha) es más eficiente que dos índices separados. Un índice (fecha, usuario_id) no serviría para queries que filtran solo por usuario_id."},
-{id:9,title:"CTEs recursivas",badge:"adv",mod:"Módulo 4 — Performance",theory:`Las <b>CTEs recursivas</b> recorren estructuras jerárquicas directamente en SQL. Ideales para organigramas, categorías anidadas, BOM en manufactura.<br><br>Estructura:<br>1. <b>Anchor query</b>: la fila inicial (raíz del árbol).<br>2. <b>UNION ALL</b>: une el anchor con la parte recursiva.<br>3. <b>Recursive query</b>: se une con el CTE mismo para bajar niveles.<br><br>El motor repite la recursión hasta que la parte recursiva no devuelve filas.`,ex:`<span class="kw">WITH RECURSIVE</span> jerarquia <span class="kw">AS</span> (\n  <span class="cmt">-- Anchor: el CEO (sin manager)</span>\n  <span class="kw">SELECT</span> id, nombre, manager_id, 0 <span class="kw">AS</span> nivel\n  <span class="kw">FROM</span> empleados\n  <span class="kw">WHERE</span> manager_id <span class="kw">IS NULL</span>\n\n  <span class="kw">UNION ALL</span>\n\n  <span class="cmt">-- Recursión: hijos del nivel actual</span>\n  <span class="kw">SELECT</span> e.id, e.nombre, e.manager_id, j.nivel + 1\n  <span class="kw">FROM</span> empleados e\n  <span class="kw">JOIN</span> jerarquia j <span class="kw">ON</span> e.manager_id = j.id\n)\n<span class="kw">SELECT</span> nombre, nivel <span class="kw">FROM</span> jerarquia\n<span class="kw">ORDER BY</span> nivel, nombre`,exercise:`Tabla: <span class="spill">categorias(id, nombre, padre_id)</span><br><br>Escribí una CTE recursiva que devuelva todas las subcategorías de la categoría id = 1, incluyendo el nivel de profundidad (nivel 0 = raíz).`,kw:["with recursive","union all","padre_id","nivel"],hint:"Anchor: categoría con id = 1 y nivel = 0. Recursión: JOIN de categorias con el CTE usando padre_id = id del CTE, sumando nivel + 1.",ok:"Muy bien! Las CTEs recursivas son la forma estándar de recorrer jerarquías en SQL sin procesar en la aplicación."},
-{id:10,title:"Transacciones y ACID",badge:"adv",mod:"Módulo 5 — Avanzado",theory:`Una <b>transacción</b> es un conjunto de operaciones que se ejecutan como una unidad atómica. Las propiedades ACID garantizan la integridad:<br><br><b>A</b>tomicity: todo o nada. Si algo falla, se revierte todo.<br><b>C</b>onsistency: la BD va de un estado válido a otro válido.<br><b>I</b>solation: las transacciones concurrentes no se interfieren.<br><b>D</b>urability: los cambios confirmados persisten aunque falle el sistema.<br><br><b>Niveles de aislamiento:</b><br>• READ UNCOMMITTED → READ COMMITTED → REPEATABLE READ → SERIALIZABLE`,ex:`<span class="kw">BEGIN</span>;\n\n<span class="kw">UPDATE</span> cuentas\n  <span class="kw">SET</span> saldo = saldo - 1000\n  <span class="kw">WHERE</span> id = 42;\n\n<span class="kw">UPDATE</span> cuentas\n  <span class="kw">SET</span> saldo = saldo + 1000\n  <span class="kw">WHERE</span> id = 99;\n\n<span class="kw">COMMIT</span>; <span class="cmt">-- confirma ambas</span>\n<span class="cmt">-- ROLLBACK; revierte ambas si algo falla</span>\n\n<span class="kw">SAVEPOINT</span> punto_1;\n<span class="kw">ROLLBACK TO</span> punto_1;`,exercise:`Escribí en SQL (con comentarios) una transacción para procesar una compra: (1) verificar stock, (2) descontar stock, (3) crear pedido, (4) cobrar al cliente.<br><br>¿Qué pasa si el cobro falla?`,kw:["begin","commit","rollback","update","insert"],hint:"Usá BEGIN para iniciar. Si el cobro falla, ROLLBACK revierte tanto el descuento de stock como la creación del pedido.",ok:"Perfecto! Las transacciones garantizan atomicidad: nunca queda el stock descontado sin el pedido creado. O todo sucede, o nada sucede."},
-{id:11,title:"Optimización de queries",badge:"adv",mod:"Módulo 5 — Avanzado",theory:`Escribir SQL eficiente es clave en producción. Errores comunes:<br><br><b>1. SELECT *</b>: trae columnas innecesarias, aumenta I/O.<br><b>2. Funciones en WHERE sobre columnas indexadas</b>: anula el índice.<br><b>3. OR vs IN</b>: OR puede no usar índices eficientemente.<br><b>4. Subqueries correlacionadas en SELECT</b>: se ejecutan N veces.<br><b>5. DISTINCT innecesario</b>: costoso, indica JOIN mal diseñado.<br><b>6. NOT IN con NULLs</b>: resultados inesperados.<br><br><code>EXPLAIN ANALYZE</code> es tu mejor amigo. Buscá "Seq Scan" en tablas grandes → falta un índice.`,ex:`<span class="cmt">-- MALO: función anula índice</span>\n<span class="kw">WHERE</span> <span class="fn">YEAR</span>(fecha) = 2024\n\n<span class="cmt">-- BIEN: rango usa el índice</span>\n<span class="kw">WHERE</span> fecha >= <span class="str">'2024-01-01'</span>\n  <span class="kw">AND</span> fecha < <span class="str">'2025-01-01'</span>\n\n<span class="cmt">-- MALO: subquery correlacionada N veces</span>\n<span class="kw">SELECT</span> nombre,\n  (<span class="kw">SELECT</span> <span class="fn">COUNT</span>(*) <span class="kw">FROM</span> pedidos\n   <span class="kw">WHERE</span> cliente_id = c.id)\n<span class="kw">FROM</span> clientes c\n\n<span class="cmt">-- BIEN: JOIN con subquery agregada</span>\n<span class="kw">SELECT</span> c.nombre, p.total\n<span class="kw">FROM</span> clientes c\n<span class="kw">LEFT JOIN</span> (<span class="kw">SELECT</span> cliente_id, <span class="fn">COUNT</span>(*) total\n            <span class="kw">FROM</span> pedidos <span class="kw">GROUP BY</span> 1) p\n  <span class="kw">ON</span> p.cliente_id = c.id`,exercise:`Recibís esta query lenta:<br><br><code>SELECT DISTINCT c.nombre, COUNT(*) FROM clientes c, pedidos p WHERE c.id = p.cliente_id AND YEAR(p.fecha) = 2024 AND c.pais IN (SELECT pais FROM paises_activos) GROUP BY c.nombre</code><br><br>Identificá 3 problemas y reescribila optimizada.`,kw:["join","where","group by"],hint:"Problemas: (1) JOIN implícito con coma, (2) YEAR() sobre columna indexada, (3) subquery IN. Reescribí con JOIN explícito, rango de fecha y JOIN para países.",ok:"Excelente! Los cambios más impactantes: JOIN explícito, rango de fechas en lugar de función, subquery convertida a JOIN."},
+const LS = [
+  {
+    id:0, title:"JOINs avanzados", badge:"med", mod:"Módulo 1 — JOINs",
+    theory:`Los <b>JOINs</b> combinan datos de múltiples tablas. Más allá del INNER JOIN básico, existen variantes esenciales para el trabajo real.<br><br>
+<b>INNER JOIN</b> — solo filas con coincidencia en ambas tablas.<br>
+<b>LEFT JOIN</b> — todas las filas de la tabla izquierda, NULL donde no hay coincidencia.<br>
+<b>RIGHT JOIN</b> — inverso del LEFT JOIN.<br>
+<b>FULL OUTER JOIN</b> — todas las filas de ambas tablas.<br>
+<b>SELF JOIN</b> — una tabla se une consigo misma (jerarquías).<br>
+<b>CROSS JOIN</b> — producto cartesiano: todas las combinaciones posibles.`,
+    example:`<span class="kw">SELECT</span> e.nombre, e.salario, d.nombre <span class="kw">AS</span> departamento
+<span class="kw">FROM</span> empleados e
+<span class="kw">LEFT JOIN</span> departamentos d <span class="kw">ON</span> e.dept_id = d.id
+
+<span class="cm">-- SELF JOIN: empleado y su manager</span>
+<span class="kw">SELECT</span> e.nombre, m.nombre <span class="kw">AS</span> manager
+<span class="kw">FROM</span> empleados e
+<span class="kw">LEFT JOIN</span> empleados m <span class="kw">ON</span> e.manager_id = m.id`,
+    exercises:[
+      {q:`Tablas: <span class="spill">clientes(id, nombre, ciudad)</span> <span class="spill">pedidos(id, cliente_id, total, fecha)</span><br><br>Mostrá el nombre de <b>todos los clientes</b> con la cantidad de pedidos que tienen. Los clientes sin pedidos deben aparecer con 0.`,kw:["left join","count","group by"],hint:"Usá LEFT JOIN para incluir clientes sin pedidos, y COUNT() con GROUP BY para contar por cliente.",ok:"Perfecto! LEFT JOIN incluye registros sin coincidencia. COUNT(*) cuenta filas y GROUP BY agrupa por cliente."},
+      {q:`Tablas: <span class="spill">productos(id, nombre, precio)</span> <span class="spill">categorias(id, nombre, padre_id)</span><br><br>Mostrá el nombre de cada producto junto con el nombre de su categoría. Incluí los productos sin categoría asignada.`,kw:["left join","on"],hint:"Usá LEFT JOIN entre productos y categorias. La condición ON conecta el campo categoria_id del producto con el id de la categoría.",ok:"Muy bien! LEFT JOIN es ideal cuando querés todos los registros de la tabla principal aunque no tengan relación en la otra tabla."},
+      {q:`Tabla: <span class="spill">empleados(id, nombre, manager_id, salario)</span><br><br>Usá un SELF JOIN para mostrar el nombre de cada empleado y el nombre de su manager. Los empleados sin manager (el CEO) deben aparecer igual.`,kw:["left join","empleados","manager"],hint:"Hacé un alias de la misma tabla: FROM empleados e LEFT JOIN empleados m ON e.manager_id = m.id",ok:"Excelente! El SELF JOIN es la técnica estándar para recorrer relaciones jerárquicas dentro de la misma tabla."},
+      {q:`Tablas: <span class="spill">estudiantes(id, nombre)</span> <span class="spill">cursos(id, nombre)</span> <span class="spill">inscripciones(estudiante_id, curso_id, nota)</span><br><br>Mostrá todos los estudiantes con todos los cursos disponibles, indicando si están inscriptos o no (nota NULL si no están inscriptos).`,kw:["cross join","left join"],hint:"Usá CROSS JOIN entre estudiantes y cursos para generar todas las combinaciones, luego LEFT JOIN con inscripciones para ver cuáles existen.",ok:"Perfecto! CROSS JOIN + LEFT JOIN es el patrón para generar una grilla completa de combinaciones posibles y ver cuáles faltan."},
+      {q:`Tablas: <span class="spill">ventas(id, vendedor_id, producto_id, monto)</span> <span class="spill">vendedores(id, nombre, region)</span> <span class="spill">productos(id, nombre, categoria)</span><br><br>Mostrá nombre del vendedor, nombre del producto y monto. Incluí solo ventas de la región "Norte" de productos de categoría "Electrónica".`,kw:["join","where","region","categoria"],hint:"Hacé JOIN de las 3 tablas y filtrá con WHERE region = 'Norte' AND categoria = 'Electrónica'.",ok:"Muy bien! Los JOINs múltiples son muy comunes en análisis de datos reales donde los datos están distribuidos en varias tablas."},
+    ]
+  },
+  {
+    id:1, title:"Subqueries", badge:"med", mod:"Módulo 1 — JOINs",
+    theory:`Una <b>subquery</b> es una consulta dentro de otra. Pueden ir en SELECT, FROM, WHERE o HAVING.<br><br>
+<b>Escalar</b>: devuelve un único valor.<br>
+<b>De lista</b>: devuelve una columna (para IN, NOT IN).<br>
+<b>Correlacionada</b>: referencia la query externa — se ejecuta por fila.<br>
+<b>En FROM</b>: se trata como tabla temporal (inline view).`,
+    example:`<span class="cm">-- Escalar: empleados sobre el promedio</span>
+<span class="kw">SELECT</span> nombre, salario
+<span class="kw">FROM</span> empleados
+<span class="kw">WHERE</span> salario > (<span class="kw">SELECT</span> <span class="fn">AVG</span>(salario) <span class="kw">FROM</span> empleados)
+
+<span class="cm">-- Correlacionada</span>
+<span class="kw">SELECT</span> nombre,
+  (<span class="kw">SELECT</span> <span class="fn">COUNT</span>(*) <span class="kw">FROM</span> pedidos p
+   <span class="kw">WHERE</span> p.cliente_id = c.id) <span class="kw">AS</span> total_pedidos
+<span class="kw">FROM</span> clientes c`,
+    exercises:[
+      {q:`Tabla: <span class="spill">productos(id, nombre, precio, categoria)</span><br><br>Devolvé los productos cuyo precio sea mayor al precio promedio de su propia categoría.`,kw:["where","select","avg","categoria"],hint:"Subquery correlacionada en WHERE: WHERE precio > (SELECT AVG(precio) FROM productos p2 WHERE p2.categoria = p1.categoria)",ok:"Excelente! La subquery correlacionada se ejecuta una vez por cada fila de la query externa comparando con la misma categoría."},
+      {q:`Tablas: <span class="spill">empleados(id, nombre, dept_id, salario)</span> <span class="spill">departamentos(id, nombre)</span><br><br>Mostrá los empleados que tienen el salario más alto de su departamento.`,kw:["where","select","max","dept_id"],hint:"WHERE salario = (SELECT MAX(salario) FROM empleados e2 WHERE e2.dept_id = e1.dept_id)",ok:"Muy bien! Este patrón de subquery correlacionada con MAX/MIN es muy usado para encontrar los valores extremos por grupo."},
+      {q:`Tabla: <span class="spill">pedidos(id, cliente_id, total, fecha)</span><br><br>Mostrá los pedidos cuyo total sea mayor al promedio de todos los pedidos del mismo cliente.`,kw:["where","select","avg","cliente_id"],hint:"WHERE total > (SELECT AVG(total) FROM pedidos p2 WHERE p2.cliente_id = p1.cliente_id)",ok:"Perfecto! Este patrón compara cada registro con el promedio de su grupo — muy útil para detectar outliers."},
+      {q:`Tablas: <span class="spill">clientes(id, nombre, pais)</span> <span class="spill">pedidos(id, cliente_id, total)</span><br><br>Mostrá los clientes que NUNCA hicieron un pedido. Usá NOT IN o NOT EXISTS.`,kw:["not in","not exists","select","cliente_id"],hint:"WHERE id NOT IN (SELECT DISTINCT cliente_id FROM pedidos) — o usá NOT EXISTS con una subquery correlacionada.",ok:"Muy bien! NOT IN y NOT EXISTS son equivalentes pero NOT EXISTS suele ser más eficiente. Ambos detectan registros huérfanos."},
+      {q:`Tabla: <span class="spill">ventas(vendedor, mes, monto)</span><br><br>Usá una subquery en el FROM para calcular el monto total por vendedor, y luego mostrá solo los vendedores cuyo total supera $10.000.`,kw:["select","from","sum","group by"],hint:"FROM (SELECT vendedor, SUM(monto) AS total FROM ventas GROUP BY vendedor) sub WHERE sub.total > 10000",ok:"Excelente! Las subqueries en el FROM (inline views) son muy poderosas y equivalen al primer CTE que vas a aprender en la siguiente lección."},
+    ]
+  },
+  {
+    id:2, title:"CTEs (WITH)", badge:"med", mod:"Módulo 2 — CTEs y Window",
+    theory:`Los <b>CTEs</b> (Common Table Expressions) son consultas temporales nombradas que mejoran la legibilidad. Se definen con <b>WITH</b>.<br><br>
+Ventajas:<br>
+• Más legibles y mantenibles que subqueries.<br>
+• Se pueden referenciar múltiples veces.<br>
+• Permiten encadenar múltiples CTEs.<br>
+• Las CTEs recursivas recorren jerarquías.`,
+    example:`<span class="kw">WITH</span> ventas_mensuales <span class="kw">AS</span> (
+  <span class="kw">SELECT</span> <span class="fn">DATE_TRUNC</span>(<span class="st">'month'</span>, fecha) <span class="kw">AS</span> mes,
+         <span class="fn">SUM</span>(total) <span class="kw">AS</span> total_mes
+  <span class="kw">FROM</span> pedidos
+  <span class="kw">GROUP BY</span> 1
+)
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> ventas_mensuales
+<span class="kw">WHERE</span> total_mes > 100000
+<span class="kw">ORDER BY</span> total_mes <span class="kw">DESC</span>`,
+    exercises:[
+      {q:`Tablas: <span class="spill">empleados(id, nombre, dept_id, salario)</span> <span class="spill">departamentos(id, nombre)</span><br><br>Usando un CTE, calculá el salario promedio por departamento y mostrá solo los que superan $60.000.`,kw:["with","avg","group by"],hint:"WITH salarios_dept AS (SELECT dept_id, AVG(salario) AS promedio FROM empleados GROUP BY dept_id) SELECT ... FROM salarios_dept WHERE promedio > 60000",ok:"Perfecto! El CTE organiza la lógica en etapas claras. Primero calcular, luego filtrar."},
+      {q:`Tabla: <span class="spill">ventas(vendedor, region, mes, monto)</span><br><br>Usando CTEs encadenados: (1) calculá el total por vendedor, (2) calculá el promedio general de todos los vendedores, (3) mostrá los vendedores que superan el promedio.`,kw:["with","sum","avg","group by"],hint:"WITH total_por_vendedor AS (...), promedio_general AS (...) SELECT * FROM total_por_vendedor, promedio_general WHERE total > promedio",ok:"Excelente! Los CTEs encadenados (separados por coma) son muy poderosos para organizar análisis complejos en pasos lógicos."},
+      {q:`Tabla: <span class="spill">pedidos(id, cliente_id, producto_id, total, fecha)</span><br><br>Usando CTEs, encontrá los 3 clientes con mayor gasto total en el año 2024.`,kw:["with","sum","group by","order by","limit"],hint:"WITH gasto_cliente AS (SELECT cliente_id, SUM(total) AS gasto FROM pedidos WHERE YEAR(fecha)=2024 GROUP BY cliente_id) SELECT * FROM gasto_cliente ORDER BY gasto DESC LIMIT 3",ok:"Muy bien! Este patrón de CTE + ORDER BY + LIMIT para encontrar el top N es uno de los más usados en reportes."},
+      {q:`Tabla: <span class="spill">transacciones(id, cuenta_id, tipo, monto, fecha)</span><br><br>Usando un CTE, calculá el saldo de cada cuenta (suma de depósitos menos suma de retiros). Mostrá solo cuentas con saldo negativo.`,kw:["with","sum","case when","group by"],hint:"Usá SUM(CASE WHEN tipo='deposito' THEN monto ELSE -monto END) AS saldo dentro del CTE, luego filtrá WHERE saldo < 0.",ok:"Perfecto! El patrón CASE WHEN dentro de SUM para calcular saldos es muy común en análisis financiero."},
+      {q:`Tablas: <span class="spill">productos(id, nombre, categoria, precio)</span> <span class="spill">ventas(producto_id, cantidad, fecha)</span><br><br>Usando CTEs, calculá el revenue total por categoría (precio * cantidad) y luego mostrá el porcentaje que representa cada categoría sobre el total general.`,kw:["with","sum","group by"],hint:"CTE 1: revenue por categoría. CTE 2: total general. Query final: JOIN ambos CTEs y calculá el porcentaje con revenue_cat / total_general * 100.",ok:"Excelente! El cálculo de porcentajes sobre el total requiere dos niveles de agregación — exactamente para lo que los CTEs encadenados son perfectos."},
+    ]
+  },
+  {
+    id:3, title:"Window Functions — Ranking", badge:"med", mod:"Módulo 2 — CTEs y Window",
+    theory:`Las <b>Window Functions</b> calculan sobre filas relacionadas sin colapsar el resultado.<br><br>
+Sintaxis: <code>funcion() OVER (PARTITION BY col ORDER BY col)</code><br><br>
+<b>PARTITION BY</b>: divide en grupos (ventanas).<br>
+<b>ORDER BY</b>: ordena dentro de cada ventana.<br><br>
+Funciones de ranking:<br>
+• <code>ROW_NUMBER()</code>: número único por fila, sin empates.<br>
+• <code>RANK()</code>: igual número a empates, salta el siguiente (1,1,3).<br>
+• <code>DENSE_RANK()</code>: igual número a empates, no salta (1,1,2).<br>
+• <code>NTILE(n)</code>: divide en n grupos iguales.`,
+    example:`<span class="kw">SELECT</span>
+  vendedor, region, monto,
+  <span class="fn">RANK</span>() <span class="kw">OVER</span> (
+    <span class="kw">PARTITION BY</span> region
+    <span class="kw">ORDER BY</span> monto <span class="kw">DESC</span>
+  ) <span class="kw">AS</span> ranking
+<span class="kw">FROM</span> ventas`,
+    exercises:[
+      {q:`Tabla: <span class="spill">ventas(vendedor, region, monto, mes)</span><br><br>Mostrá el ranking de cada vendedor dentro de su región (1 = mayor vendedor). Usá RANK().`,kw:["rank","over","partition by","order by"],hint:"RANK() OVER (PARTITION BY region ORDER BY monto DESC) AS ranking",ok:"Perfecto! RANK() asigna el mismo número a empates y salta el siguiente (1,1,3)."},
+      {q:`Tabla: <span class="spill">empleados(id, nombre, dept_id, salario)</span><br><br>Asigná a cada empleado su posición salarial dentro de su departamento usando DENSE_RANK(). ¿En qué se diferencia del RANK()?`,kw:["dense_rank","over","partition by","order by"],hint:"DENSE_RANK() OVER (PARTITION BY dept_id ORDER BY salario DESC) — a diferencia de RANK(), no salta números después de empates.",ok:"Muy bien! DENSE_RANK no salta números (1,1,2 en vez de 1,1,3). Usalo cuando los gaps en el ranking serían confusos para el usuario."},
+      {q:`Tabla: <span class="spill">productos(id, nombre, categoria, ventas_totales)</span><br><br>Usando ROW_NUMBER(), asigná un número único a cada producto dentro de su categoría ordenado por ventas. Luego filtrá para obtener el top 3 por categoría.`,kw:["row_number","over","partition by","where"],hint:"Usá un CTE con ROW_NUMBER() OVER (PARTITION BY categoria ORDER BY ventas_totales DESC) y luego filtrá WHERE rn <= 3.",ok:"Excelente! ROW_NUMBER() + filtro en CTE es el patrón estándar para obtener el top N por grupo — muy pedido en entrevistas técnicas."},
+      {q:`Tabla: <span class="spill">clientes(id, nombre, pais, total_compras)</span><br><br>Usando NTILE(4), dividí los clientes en 4 cuartiles según su total de compras. Luego mostrá cuántos clientes hay en cada cuartil.`,kw:["ntile","over","order by","group by"],hint:"NTILE(4) OVER (ORDER BY total_compras) AS cuartil. Luego GROUP BY cuartil y COUNT(*) para ver la distribución.",ok:"Muy bien! NTILE divide los datos en grupos iguales. Es perfecto para segmentación de clientes (quartiles, deciles, percentiles)."},
+      {q:`Tabla: <span class="spill">examen(estudiante_id, materia, nota)</span><br><br>Para cada materia, mostrá el estudiante con la nota más alta (rank = 1). En caso de empate mostrá todos los que comparten el primer puesto.`,kw:["rank","over","partition by","where"],hint:"Usá RANK() OVER (PARTITION BY materia ORDER BY nota DESC). Luego filtrá WHERE ranking = 1 para obtener solo los primeros.",ok:"Perfecto! Usar RANK() en lugar de ROW_NUMBER() aquí es clave para incluir todos los empates en el primer puesto."},
+    ]
+  },
+  {
+    id:4, title:"Window Functions — LAG y LEAD", badge:"adv", mod:"Módulo 2 — CTEs y Window",
+    theory:`<b>LAG()</b> y <b>LEAD()</b> acceden a filas anteriores o siguientes sin self-join.<br><br>
+<code>LAG(col, n, default)</code> → valor de n filas hacia atrás.<br>
+<code>LEAD(col, n, default)</code> → valor de n filas hacia adelante.<br><br>
+Útiles para:<br>
+• Variaciones período a período (MoM, YoY).<br>
+• Tiempo entre eventos.<br>
+• Comparar con el período anterior.`,
+    example:`<span class="kw">SELECT</span>
+  mes, ventas,
+  <span class="fn">LAG</span>(ventas) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes) <span class="kw">AS</span> mes_anterior,
+  ventas - <span class="fn">LAG</span>(ventas) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes) <span class="kw">AS</span> variacion
+<span class="kw">FROM</span> ventas_mensuales`,
+    exercises:[
+      {q:`Tabla: <span class="spill">metricas(producto, mes, revenue)</span><br><br>Calculá el revenue actual, el del mes anterior (LAG) y el crecimiento porcentual MoM por producto. Mostrá solo los registros con crecimiento mayor al 10%.`,kw:["lag","over","partition by","order by"],hint:"LAG(revenue) OVER (PARTITION BY producto ORDER BY mes). Para filtrar usá un CTE y luego WHERE crecimiento_pct > 10.",ok:"Perfecto! LAG + cálculo porcentual es el patrón estándar para análisis de tendencias período a período."},
+      {q:`Tabla: <span class="spill">stock(producto, fecha, cantidad)</span><br><br>Calculá la variación diaria de stock por producto (cantidad actual menos cantidad del día anterior). Mostrá los días con caída mayor a 100 unidades.`,kw:["lag","over","partition by","order by"],hint:"cantidad - LAG(cantidad) OVER (PARTITION BY producto ORDER BY fecha) AS variacion. Filtrá WHERE variacion < -100.",ok:"Muy bien! LAG con diferencias absolutas es ideal para detectar caídas o picos en series de tiempo."},
+      {q:`Tabla: <span class="spill">sesiones(usuario_id, inicio, fin)</span><br><br>Para cada usuario, calculá el tiempo entre el fin de una sesión y el inicio de la siguiente (tiempo entre sesiones). Mostrá los usuarios con gaps mayores a 7 días.`,kw:["lead","lag","over","partition by"],hint:"Usá LEAD(inicio) OVER (PARTITION BY usuario_id ORDER BY inicio) para obtener el inicio de la próxima sesión. Restá fin de la sesión actual.",ok:"Excelente! LEAD es perfecto para calcular el tiempo hasta el próximo evento — muy usado en análisis de retención y comportamiento de usuarios."},
+      {q:`Tabla: <span class="spill">ventas(region, anio, trimestre, monto)</span><br><br>Calculá el crecimiento YoY (año contra año) para cada región y trimestre. Compará el monto actual con el mismo trimestre del año anterior.`,kw:["lag","over","partition by","order by"],hint:"PARTITION BY region, trimestre ORDER BY anio para que LAG tome el mismo trimestre del año anterior.",ok:"Perfecto! PARTITION BY múltiple columnas es clave para comparar períodos equivalentes (mismo trimestre, mismo mes del año anterior)."},
+      {q:`Tabla: <span class="spill">precios(accion, fecha, precio_cierre)</span><br><br>Calculá para cada acción el precio de hace 5 días (LAG con offset 5) y el precio esperado en 5 días (LEAD con offset 5). Mostrá la diferencia proyectada.`,kw:["lag","lead","over","partition by"],hint:"LAG(precio_cierre, 5) OVER (PARTITION BY accion ORDER BY fecha) y LEAD(precio_cierre, 5) OVER (...). El segundo parámetro de LAG/LEAD es el offset.",ok:"Muy bien! Los offsets en LAG/LEAD permiten comparar con cualquier período, no solo el inmediatamente anterior o siguiente."},
+    ]
+  },
+  {
+    id:5, title:"Window — SUM y AVG acumulados", badge:"adv", mod:"Módulo 2 — CTEs y Window",
+    theory:`Las window functions también funcionan con agregaciones como <b>SUM y AVG</b>, pero sin colapsar las filas.<br><br>
+<b>Running total (acumulado):</b><br>
+<code>SUM(monto) OVER (ORDER BY fecha)</code><br><br>
+<b>Acumulado por grupo:</b><br>
+<code>SUM(monto) OVER (PARTITION BY region ORDER BY fecha)</code><br><br>
+<b>Frame clause</b> — controla qué filas incluir en la ventana:<br>
+<code>ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW</code> → desde el inicio hasta la fila actual.<br>
+<code>ROWS BETWEEN 2 PRECEDING AND CURRENT ROW</code> → media móvil de 3 períodos.`,
+    example:`<span class="kw">SELECT</span>
+  fecha, monto,
+  <span class="fn">SUM</span>(monto) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> fecha) <span class="kw">AS</span> acumulado,
+  <span class="fn">AVG</span>(monto) <span class="kw">OVER</span> (
+    <span class="kw">ORDER BY</span> fecha
+    <span class="kw">ROWS BETWEEN</span> 2 <span class="kw">PRECEDING AND CURRENT ROW</span>
+  ) <span class="kw">AS</span> media_movil_3
+<span class="kw">FROM</span> ventas`,
+    exercises:[
+      {q:`Tabla: <span class="spill">pagos(cliente_id, fecha, monto)</span><br><br>Calculá el total acumulado de pagos por cliente a lo largo del tiempo (running total por cliente).`,kw:["sum","over","partition by","order by"],hint:"SUM(monto) OVER (PARTITION BY cliente_id ORDER BY fecha) AS acumulado",ok:"Perfecto! El running total particionado por cliente te muestra cómo crece el gasto de cada cliente en el tiempo."},
+      {q:`Tabla: <span class="spill">ventas_diarias(fecha, region, ventas)</span><br><br>Calculá una media móvil de 7 días (promedio de la semana actual y las 6 anteriores) para suavizar las fluctuaciones diarias de ventas por región.`,kw:["avg","over","partition by","rows between","preceding"],hint:"AVG(ventas) OVER (PARTITION BY region ORDER BY fecha ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)",ok:"Muy bien! La media móvil es fundamental para suavizar series de tiempo y detectar tendencias reales vs ruido diario."},
+      {q:`Tabla: <span class="spill">ventas(mes, categoria, monto)</span><br><br>Calculá el porcentaje que representa cada mes sobre el total acumulado hasta ese mes (% del acumulado) por categoría.`,kw:["sum","over","partition by","order by"],hint:"monto / SUM(monto) OVER (PARTITION BY categoria ORDER BY mes) * 100 AS pct_acumulado",ok:"Excelente! Combinar SUM acumulado con el monto actual da el porcentaje de avance — muy usado en reportes de cumplimiento de metas."},
+      {q:`Tabla: <span class="spill">metricas_web(fecha, pagina, visitas)</span><br><br>Calculá el total de visitas desde el inicio del mes hasta cada día (acumulado mensual). Reiniciá el acumulado al inicio de cada mes.`,kw:["sum","over","partition by","order by"],hint:"PARTITION BY DATE_TRUNC('month', fecha), pagina ORDER BY fecha para que el acumulado reinicie cada mes.",ok:"Perfecto! PARTITION BY con DATE_TRUNC permite crear acumulados que se reinician al inicio de cada período."},
+      {q:`Tabla: <span class="spill">transacciones(cuenta_id, fecha, tipo, monto)</span><br><br>Calculá el saldo acumulado de cada cuenta: sumá los depósitos y restá los retiros en orden cronológico.`,kw:["sum","case when","over","partition by","order by"],hint:"SUM(CASE WHEN tipo='deposito' THEN monto ELSE -monto END) OVER (PARTITION BY cuenta_id ORDER BY fecha) AS saldo",ok:"Muy bien! Combinar CASE WHEN con SUM acumulado es el patrón estándar para calcular saldos contables en SQL."},
+    ]
+  },
+  {
+    id:6, title:"HAVING vs WHERE", badge:"med", mod:"Módulo 3 — Agregaciones",
+    theory:`<b>WHERE</b> filtra filas <i>antes</i> de agregar. <b>HAVING</b> filtra <i>después</i> de agregar.<br><br>
+Orden de ejecución SQL:<br>
+FROM → WHERE → GROUP BY → Agregaciones → HAVING → SELECT → ORDER BY → LIMIT<br><br>
+<b>Regla:</b> si el filtro usa una función de agregación → HAVING. Si filtra columnas normales → WHERE.`,
+    example:`<span class="kw">SELECT</span> categoria, <span class="fn">COUNT</span>(*) <span class="kw">AS</span> total
+<span class="kw">FROM</span> productos
+<span class="kw">WHERE</span> precio > 100
+<span class="kw">GROUP BY</span> categoria
+<span class="kw">HAVING</span> <span class="fn">COUNT</span>(*) > 5`,
+    exercises:[
+      {q:`Tabla: <span class="spill">ordenes(cliente_id, producto, monto, fecha)</span><br><br>Encontrá clientes que en 2024 hicieron más de 5 compras Y cuyo monto promedio supera $500.`,kw:["having","group by","count","avg"],hint:"WHERE filtra por año. GROUP BY cliente_id. HAVING COUNT(*) > 5 AND AVG(monto) > 500.",ok:"Correcto! WHERE filtra las filas del 2024. HAVING filtra los grupos que cumplen las condiciones de agregación."},
+      {q:`Tabla: <span class="spill">ventas(vendedor_id, region, monto, mes)</span><br><br>Mostrá las regiones donde la suma total de ventas supera $100.000 Y donde ningún vendedor individual supera $50.000 en un mes.`,kw:["having","group by","sum","max"],hint:"HAVING SUM(monto) > 100000 AND MAX(monto) <= 50000 — las dos condiciones sobre agregaciones van en HAVING.",ok:"Muy bien! HAVING puede combinar múltiples condiciones de agregación con AND/OR igual que WHERE con condiciones normales."},
+      {q:`Tabla: <span class="spill">productos(id, categoria, precio, stock)</span><br><br>Mostrá las categorías que tienen más de 10 productos con precio mayor a $200 y stock mayor a 0.`,kw:["having","where","group by","count"],hint:"WHERE filtra precio > 200 AND stock > 0. Luego GROUP BY categoria. HAVING COUNT(*) > 10.",ok:"Perfecto! Combinar WHERE y HAVING en la misma query es muy común: WHERE filtra los registros individuales, HAVING filtra los grupos resultantes."},
+      {q:`Tabla: <span class="spill">llamadas(agente_id, duracion_segundos, satisfaccion, fecha)</span><br><br>Encontrá los agentes que atendieron más de 50 llamadas en el último mes Y cuya satisfacción promedio es menor a 3 (de 5).`,kw:["having","group by","count","avg"],hint:"WHERE filtra el último mes. GROUP BY agente_id. HAVING COUNT(*) > 50 AND AVG(satisfaccion) < 3.",ok:"Excelente! Este tipo de query es muy útil para detectar agentes con alta carga pero bajo rendimiento."},
+      {q:`Tabla: <span class="spill">transacciones(cuenta_id, monto, fecha, tipo)</span><br><br>Encontrá cuentas que en el último año tuvieron más de 100 transacciones de tipo 'retiro' Y cuyo retiro máximo supera $10.000.`,kw:["having","group by","count","max","where"],hint:"WHERE tipo='retiro' AND fecha en el último año. GROUP BY cuenta_id. HAVING COUNT(*) > 100 AND MAX(monto) > 10000.",ok:"Muy bien! Este patrón es el que usan los sistemas anti-fraude para detectar comportamientos inusuales."},
+    ]
+  },
+  {
+    id:7, title:"CASE WHEN", badge:"med", mod:"Módulo 3 — Agregaciones",
+    theory:`<b>CASE WHEN</b> es el if/else del SQL. Crea columnas condicionales y es extremadamente versátil.<br><br>
+Usos principales:<br>
+• Crear categorías o segmentos.<br>
+• Pivotear datos (filas en columnas).<br>
+• Contar condicionalmente: <code>COUNT(CASE WHEN ... THEN 1 END)</code>.<br>
+• Asignar pesos o scores.`,
+    example:`<span class="kw">SELECT</span> cliente_id,
+  <span class="kw">CASE</span>
+    <span class="kw">WHEN</span> total >= 10000 <span class="kw">THEN</span> <span class="st">'VIP'</span>
+    <span class="kw">WHEN</span> total >= 1000  <span class="kw">THEN</span> <span class="st">'Premium'</span>
+    <span class="kw">ELSE</span> <span class="st">'Regular'</span>
+  <span class="kw">END</span> <span class="kw">AS</span> segmento
+<span class="kw">FROM</span> clientes`,
+    exercises:[
+      {q:`Tabla: <span class="spill">empleados(id, nombre, salario)</span><br><br>Clasificá cada empleado: 'Junior' (< $40k), 'Mid' ($40k-$80k), 'Senior' ($80k-$120k), 'Lead' (> $120k). Contá cuántos hay en cada banda.`,kw:["case when","group by","count"],hint:"Usá CASE WHEN en el SELECT para crear 'banda'. Luego envolvé en CTE y hacé GROUP BY banda, COUNT(*).",ok:"Excelente! GROUP BY + COUNT sobre una columna CASE es el patrón estándar de segmentación en reportes."},
+      {q:`Tabla: <span class="spill">ventas(vendedor, mes, categoria, monto)</span><br><br>Pivoteá los datos: mostrá una fila por vendedor con columnas separadas para el monto de cada categoría (Electrónica, Ropa, Hogar). Usá CASE WHEN para el pivot.`,kw:["case when","sum","group by"],hint:"SUM(CASE WHEN categoria='Electronica' THEN monto ELSE 0 END) AS electronica — repetí para cada categoría.",ok:"Muy bien! El pivot con CASE WHEN + SUM es la técnica estándar para transformar filas en columnas en SQL."},
+      {q:`Tabla: <span class="spill">pedidos(id, estado, total, fecha)</span><br><br>Calculá en una sola query: cantidad de pedidos pendientes, en proceso, completados y cancelados. Usá COUNT con CASE WHEN.`,kw:["case when","count","sum"],hint:"COUNT(CASE WHEN estado='pendiente' THEN 1 END) AS pendientes — repetí para cada estado. No necesitás GROUP BY.",ok:"Perfecto! COUNT(CASE WHEN ...) es más eficiente que hacer 4 queries separadas. Una sola pasada por los datos, 4 métricas."},
+      {q:`Tabla: <span class="spill">clientes(id, pais, total_compras, ultima_compra)</span><br><br>Asigná un score de 1 a 5 a cada cliente: +2 si es de Argentina, +1 si compró más de $1000, +1 si compró en los últimos 30 días, +1 si compró más de 5 veces. Mostrá el score y el segmento resultante.`,kw:["case when","end"],hint:"Podés sumar múltiples CASE WHEN: (CASE WHEN pais='Argentina' THEN 2 ELSE 0 END) + (CASE WHEN total>1000 THEN 1 ELSE 0 END) + ...",ok:"Excelente! Sumar CASE WHEN permite construir sistemas de scoring complejos directamente en SQL."},
+      {q:`Tabla: <span class="spill">llamadas_soporte(id, agente_id, duracion_min, resuelto, fecha)</span><br><br>Para cada agente calculá: total de llamadas, % resueltas, duración promedio, y clasificá su performance como 'Excelente' (>80% resueltas), 'Buena' (60-80%) o 'Necesita mejora' (<60%).`,kw:["case when","count","avg","group by"],hint:"GROUP BY agente_id. AVG(CASE WHEN resuelto THEN 1.0 ELSE 0 END)*100 para el porcentaje. CASE WHEN en el SELECT final para la clasificación.",ok:"Muy bien! Este tipo de reporte de performance combinando agregaciones con CASE WHEN es muy común en análisis de operaciones."},
+    ]
+  },
+  {
+    id:8, title:"Índices y performance", badge:"adv", mod:"Módulo 4 — Performance",
+    theory:`Los <b>índices</b> aceleran búsquedas sin cambiar los datos.<br><br>
+<b>Tipos:</b><br>
+• <b>B-Tree</b>: el más común. Para =, >, <, BETWEEN, ORDER BY.<br>
+• <b>Hash</b>: solo para igualdad (=).<br>
+• <b>Compuesto</b>: múltiples columnas. El orden importa.<br><br>
+<b>Cuándo NO ayuda un índice:</b><br>
+• Tablas pequeñas.<br>
+• Funciones sobre la columna indexada.<br>
+• Muy baja cardinalidad.`,
+    example:`<span class="kw">CREATE INDEX</span> idx_pedidos_cliente <span class="kw">ON</span> pedidos(cliente_id);
+<span class="kw">CREATE INDEX</span> idx_pedidos_fecha_estado <span class="kw">ON</span> pedidos(fecha, estado);
+
+<span class="cm">-- MALO: función anula el índice</span>
+<span class="kw">WHERE</span> <span class="fn">YEAR</span>(fecha) = 2024
+<span class="cm">-- BIEN: rango usa el índice</span>
+<span class="kw">WHERE</span> fecha >= <span class="st">'2024-01-01'</span> <span class="kw">AND</span> fecha < <span class="st">'2025-01-01'</span>`,
+    exercises:[
+      {q:`Tabla: <span class="spill">eventos(id, usuario_id, tipo, fecha, payload JSONB)</span> con 50M filas. Queries frecuentes filtran por usuario_id y fecha.<br><br>Escribí los CREATE INDEX apropiados y explicá el orden de columnas elegido.`,kw:["create index","on","usuario_id","fecha"],hint:"Índice compuesto (usuario_id, fecha): sirve para queries con solo usuario_id (usa el prefijo) y para queries con ambas columnas.",ok:"Correcto! El índice (usuario_id, fecha) es más eficiente que dos índices separados. La columna de igualdad va primero."},
+      {q:`Tenés esta query lenta: <code>SELECT * FROM pedidos WHERE YEAR(fecha) = 2024 AND estado = 'completado'</code><br><br>Reescribila para que use un índice en la columna fecha. Luego escribí el índice óptimo para esta query.`,kw:["where","between","create index"],hint:"Reemplazá YEAR(fecha)=2024 por fecha >= '2024-01-01' AND fecha < '2025-01-01'. El índice compuesto sería (estado, fecha) o (fecha, estado).",ok:"Muy bien! Evitar funciones sobre columnas indexadas es uno de los cambios más impactantes para el performance."},
+      {q:`Tenés una tabla <span class="spill">usuarios(id, email, nombre, pais, activo)</span>. La columna <code>activo</code> solo tiene valores TRUE/FALSE (50% cada uno).<br><br>¿Conviene crear un índice sobre <code>activo</code>? ¿Y sobre <code>email</code>? Explicá por qué y escribí el índice que sí conviene.`,kw:["create index","on","email"],hint:"Activo tiene baja cardinalidad (2 valores) → no conviene. Email es único → alta cardinalidad, muy conveniente para búsquedas exactas.",ok:"Perfecto! La cardinalidad es clave: índices en columnas con pocos valores distintos no ayudan porque el motor igual tiene que leer muchas filas."},
+      {q:`Query lenta en producción:<br><code>SELECT c.nombre, COUNT(p.id) FROM clientes c LEFT JOIN pedidos p ON c.id = p.cliente_id WHERE c.pais = 'Argentina' GROUP BY c.id, c.nombre</code><br><br>¿Qué índices crearías para optimizarla?`,kw:["create index","on","pais","cliente_id"],hint:"Dos índices: (1) en clientes(pais) para el filtro WHERE, (2) en pedidos(cliente_id) para el JOIN.",ok:"Excelente! En JOINs conviene indexar las columnas de ambas tablas involucradas en la condición ON, y también las columnas del WHERE."},
+      {q:`Tabla: <span class="spill">logs(id, app_id, nivel, mensaje, fecha, usuario_id)</span> con 500M filas. Las queries más comunes son: (1) últimos logs por app, (2) errores por usuario en una fecha, (3) conteo de logs por nivel en el último mes.<br><br>Diseñá los índices para cubrir los 3 casos.`,kw:["create index","on","app_id","usuario_id","nivel","fecha"],hint:"Query 1: índice (app_id, fecha). Query 2: índice (usuario_id, nivel, fecha). Query 3: índice (nivel, fecha). Considerá si un índice compuesto puede cubrir varios casos.",ok:"Muy bien! Diseñar índices para múltiples patrones de queries requiere analizar cuáles se pueden cubrir con un solo índice compuesto vs varios índices separados."},
+    ]
+  },
+  {
+    id:9, title:"CTEs recursivas", badge:"adv", mod:"Módulo 4 — Performance",
+    theory:`Las <b>CTEs recursivas</b> recorren estructuras jerárquicas directamente en SQL.<br><br>
+Estructura obligatoria:<br>
+1. <b>Anchor query</b>: la fila inicial (raíz).<br>
+2. <b>UNION ALL</b>: une anchor con la parte recursiva.<br>
+3. <b>Recursive query</b>: se une con el CTE mismo.<br><br>
+El motor repite la recursión hasta que no devuelve filas.`,
+    example:`<span class="kw">WITH RECURSIVE</span> jerarquia <span class="kw">AS</span> (
+  <span class="kw">SELECT</span> id, nombre, manager_id, 0 <span class="kw">AS</span> nivel
+  <span class="kw">FROM</span> empleados <span class="kw">WHERE</span> manager_id <span class="kw">IS NULL</span>
+  <span class="kw">UNION ALL</span>
+  <span class="kw">SELECT</span> e.id, e.nombre, e.manager_id, j.nivel + 1
+  <span class="kw">FROM</span> empleados e
+  <span class="kw">JOIN</span> jerarquia j <span class="kw">ON</span> e.manager_id = j.id
+)
+<span class="kw">SELECT</span> nombre, nivel <span class="kw">FROM</span> jerarquia`,
+    exercises:[
+      {q:`Tabla: <span class="spill">categorias(id, nombre, padre_id)</span><br><br>Devolvé todas las subcategorías de la categoría id = 1, incluyendo el nivel de profundidad.`,kw:["with recursive","union all","padre_id","nivel"],hint:"Anchor: WHERE id = 1, nivel = 0. Recursión: JOIN categorias ON padre_id = id del CTE, nivel + 1.",ok:"Muy bien! Las CTEs recursivas son la forma estándar de recorrer jerarquías en SQL."},
+      {q:`Tabla: <span class="spill">empleados(id, nombre, manager_id, salario)</span><br><br>Partiendo del empleado con id = 5, encontrá toda su cadena de managers hasta el CEO (hacia arriba en la jerarquía).`,kw:["with recursive","union all","manager_id"],hint:"Anchor: WHERE id = 5. Recursión: JOIN empleados ON id = manager_id del CTE (subís en lugar de bajar).",ok:"Perfecto! La recursión puede ir hacia arriba (buscar padres) o hacia abajo (buscar hijos) — solo cambia la dirección del JOIN."},
+      {q:`Tabla: <span class="spill">tareas(id, nombre, tarea_padre_id, duracion_dias)</span><br><br>Calculá la ruta crítica de un proyecto: mostrá todas las tareas con su nivel, el nombre de la tarea padre y la duración acumulada desde la raíz.`,kw:["with recursive","union all","tarea_padre_id","sum"],hint:"En la parte recursiva acumulá la duración: t.duracion_dias + r.duracion_acumulada AS duracion_acumulada.",ok:"Excelente! Acumular valores (suma, concatenación de path) durante la recursión es un patrón muy potente para análisis de estructuras jerárquicas."},
+      {q:`Tabla: <span class="spill">cuentas(id, nombre, cuenta_padre_id, monto)</span><br><br>Calculá el monto total de cada cuenta incluyendo todos sus descendientes (suma de toda la sub-jerarquía bajo cada cuenta).`,kw:["with recursive","union all","cuenta_padre_id","sum","group by"],hint:"Generá todos los pares (ancestro, descendiente) con la CTE recursiva, luego hacé JOIN con cuentas y SUM(monto) GROUP BY ancestro.",ok:"Muy bien! Calcular sumas jerárquicas (como en planes de cuentas contables) es uno de los usos más comunes de CTEs recursivas en finanzas."},
+      {q:`Tabla: <span class="spill">paginas_web(id, url, referrer_id)</span><br><br>Encontrá todos los caminos de navegación de longitud mayor a 3 pasos, mostrando la ruta completa como una cadena de URLs concatenadas.`,kw:["with recursive","union all","referrer_id","concat"],hint:"Acumulá el path con CONCAT(path, ' -> ', url). En la parte recursiva unís la nueva URL al path acumulado. Filtrá WHERE nivel > 3.",ok:"Perfecto! Concatenar paths durante la recursión permite reconstruir rutas completas — muy útil para análisis de navegación y grafos."},
+    ]
+  },
+  {
+    id:10, title:"Transacciones y ACID", badge:"adv", mod:"Módulo 5 — Avanzado",
+    theory:`Una <b>transacción</b> es un conjunto de operaciones que se ejecutan como una unidad atómica.<br><br>
+Propiedades ACID:<br>
+<b>A</b>tomicity: todo o nada.<br>
+<b>C</b>onsistency: la BD va de un estado válido a otro válido.<br>
+<b>I</b>solation: las transacciones concurrentes no se interfieren.<br>
+<b>D</b>urability: los cambios confirmados persisten siempre.<br><br>
+<b>Niveles de aislamiento:</b> READ UNCOMMITTED → READ COMMITTED → REPEATABLE READ → SERIALIZABLE.`,
+    example:`<span class="kw">BEGIN</span>;
+<span class="kw">UPDATE</span> cuentas <span class="kw">SET</span> saldo = saldo - 1000 <span class="kw">WHERE</span> id = 42;
+<span class="kw">UPDATE</span> cuentas <span class="kw">SET</span> saldo = saldo + 1000 <span class="kw">WHERE</span> id = 99;
+<span class="kw">COMMIT</span>;
+<span class="cm">-- Si algo falla: ROLLBACK revierte todo</span>`,
+    exercises:[
+      {q:`Escribí en SQL (con comentarios) una transacción para procesar una compra: (1) verificar stock, (2) descontar stock, (3) crear pedido, (4) cobrar al cliente. ¿Qué pasa si el cobro falla?`,kw:["begin","commit","rollback","update","insert"],hint:"BEGIN → UPDATE stock → INSERT pedido → UPDATE saldo cliente. Si algo falla: ROLLBACK revierte todo. Si todo OK: COMMIT.",ok:"Perfecto! Las transacciones garantizan atomicidad: o todo ocurre o nada ocurre. El stock nunca queda descontado sin el pedido creado."},
+      {q:`Tabla: <span class="spill">cuentas(id, saldo, version)</span><br><br>Escribí una transacción que implemente <b>optimistic locking</b>: al actualizar el saldo, verificá que la versión no cambió desde que la leíste. Si cambió, hacé ROLLBACK.`,kw:["begin","update","where","version","rollback","commit"],hint:"UPDATE cuentas SET saldo=..., version=version+1 WHERE id=? AND version=? — si actualiza 0 filas es porque alguien modificó antes → ROLLBACK.",ok:"Muy bien! El optimistic locking con columna version evita conflictos de concurrencia sin bloquear las filas durante toda la transacción."},
+      {q:`Tabla: <span class="spill">inventario(producto_id, deposito_id, cantidad)</span><br><br>Escribí una transacción que transfiera 100 unidades del producto 5 desde el depósito 1 al depósito 2. Asegurate de que si el stock es insuficiente se haga ROLLBACK.`,kw:["begin","update","rollback","commit","where"],hint:"BEGIN → UPDATE restando del depósito 1 (con WHERE cantidad >= 100) → verificar filas afectadas → UPDATE sumando al depósito 2 → COMMIT o ROLLBACK.",ok:"Excelente! Las transferencias entre registros son el caso clásico de transacciones: ambas operaciones deben ocurrir juntas o ninguna."},
+      {q:`¿Qué nivel de aislamiento usarías en cada caso? Escribí la sentencia SQL y justificá:<br>(a) Un reporte de ventas donde no importa ver datos no confirmados.<br>(b) Una transferencia bancaria que no puede ver saldos a medio actualizar.<br>(c) Un proceso que necesita que sus lecturas sean consistentes durante toda la transacción.`,kw:["isolation level","read committed","serializable","repeatable read"],hint:"(a) READ COMMITTED es el default seguro. (b) SERIALIZABLE para máxima protección. (c) REPEATABLE READ para lecturas consistentes.",ok:"Muy bien! Elegir el nivel de aislamiento correcto es un balance entre consistencia y performance. Más aislamiento = más locks = menos concurrencia."},
+      {q:`Tablas: <span class="spill">pedidos(id, cliente_id, estado)</span> <span class="spill">items_pedido(pedido_id, producto_id, cantidad)</span> <span class="spill">inventario(producto_id, stock)</span><br><br>Escribí una transacción completa para cancelar un pedido: (1) cambiar estado a 'cancelado', (2) devolver el stock de cada item al inventario, (3) solo si el estado actual es 'pendiente'.`,kw:["begin","update","where","commit","rollback"],hint:"BEGIN → verificar estado='pendiente' → UPDATE pedidos SET estado='cancelado' → UPDATE inventario sumando stock por cada item → COMMIT.",ok:"Perfecto! Las transacciones que afectan múltiples tablas relacionadas son muy comunes. El orden de las operaciones y la verificación previa de condiciones son clave."},
+    ]
+  },
+  {
+    id:11, title:"Optimización de queries", badge:"adv", mod:"Módulo 5 — Avanzado",
+    theory:`Escribir SQL eficiente es lo que importa en producción. Errores comunes:<br><br>
+1. <b>SELECT *</b>: trae columnas innecesarias.<br>
+2. <b>Funciones en WHERE</b>: anula el índice.<br>
+3. <b>Subqueries correlacionadas en SELECT</b>: se ejecutan N veces.<br>
+4. <b>DISTINCT innecesario</b>: costoso, indica JOIN mal diseñado.<br>
+5. <b>NOT IN con NULLs</b>: puede devolver resultados inesperados.<br><br>
+<code>EXPLAIN ANALYZE</code> es tu mejor herramienta. Buscá "Seq Scan" en tablas grandes.`,
+    example:`<span class="cm">-- MALO: función anula índice</span>
+<span class="kw">WHERE</span> <span class="fn">YEAR</span>(fecha) = 2024
+<span class="cm">-- BIEN: rango usa el índice</span>
+<span class="kw">WHERE</span> fecha >= <span class="st">'2024-01-01'</span> <span class="kw">AND</span> fecha < <span class="st">'2025-01-01'</span>
+
+<span class="cm">-- MALO: subquery correlacionada</span>
+<span class="kw">SELECT</span> nombre, (<span class="kw">SELECT</span> <span class="fn">COUNT</span>(*) <span class="kw">FROM</span> pedidos <span class="kw">WHERE</span> cliente_id = c.id)
+<span class="kw">FROM</span> clientes c
+<span class="cm">-- BIEN: JOIN con subquery agregada</span>
+<span class="kw">SELECT</span> c.nombre, p.total <span class="kw">FROM</span> clientes c
+<span class="kw">LEFT JOIN</span> (<span class="kw">SELECT</span> cliente_id, <span class="fn">COUNT</span>(*) total <span class="kw">FROM</span> pedidos <span class="kw">GROUP BY</span> 1) p
+<span class="kw">ON</span> p.cliente_id = c.id`,
+    exercises:[
+      {q:`Query lenta: <code>SELECT DISTINCT c.nombre, COUNT(*) FROM clientes c, pedidos p WHERE c.id = p.cliente_id AND YEAR(p.fecha) = 2024 AND c.pais IN (SELECT pais FROM paises_activos) GROUP BY c.nombre</code><br><br>Identificá 3 problemas y reescribila optimizada.`,kw:["join","where","group by","between"],hint:"(1) JOIN implícito con coma. (2) YEAR() sobre columna indexada. (3) Subquery IN. Reescribí con JOIN explícito, rango de fecha y JOIN para países.",ok:"Excelente! Los tres cambios juntos pueden mejorar la performance 10x o más en tablas grandes."},
+      {q:`Tabla: <span class="spill">logs(id, user_id, accion, fecha)</span> con 1B filas.<br><br>Query: <code>SELECT user_id, COUNT(*) FROM logs WHERE accion NOT IN (SELECT accion FROM acciones_excluidas) GROUP BY user_id</code><br><br>¿Qué problema puede tener NOT IN? Reescribila con NOT EXISTS o LEFT JOIN.`,kw:["not exists","left join","where","is null"],hint:"NOT IN falla si la subquery devuelve NULLs. Reescribí con LEFT JOIN ... WHERE acciones_excluidas.accion IS NULL, o con NOT EXISTS.",ok:"Muy bien! NOT IN con NULLs es un bug silencioso muy común. NOT EXISTS o LEFT JOIN + IS NULL son alternativas correctas y más eficientes."},
+      {q:`Tenés esta query que se ejecuta 1000 veces por minuto:<br><code>SELECT * FROM productos WHERE categoria = 'Electronica' ORDER BY precio DESC LIMIT 10</code><br><br>¿Cómo la optimizarías? Escribí el índice óptimo y la query mejorada.`,kw:["select","create index","categoria","precio"],hint:"(1) SELECT * → seleccioná solo las columnas necesarias. (2) Índice compuesto (categoria, precio DESC) para cubrir el filtro y el ORDER BY.",ok:"Perfecto! Un índice que cubre tanto el WHERE como el ORDER BY evita que el motor ordene los resultados — gran ganancia en queries frecuentes."},
+      {q:`Query lenta en un reporte:<br><code>SELECT p.nombre, (SELECT SUM(v.monto) FROM ventas v WHERE v.producto_id = p.id) AS total, (SELECT COUNT(*) FROM ventas v WHERE v.producto_id = p.id) AS cantidad FROM productos p</code><br><br>Reescribila eliminando las subqueries correlacionadas.`,kw:["left join","sum","count","group by"],hint:"LEFT JOIN con una subquery que agrupa ventas: SELECT producto_id, SUM(monto), COUNT(*) FROM ventas GROUP BY producto_id. Luego JOIN con productos.",ok:"Excelente! Cada subquery correlacionada en el SELECT se ejecuta N veces (una por fila). Un JOIN con subquery agregada se ejecuta una sola vez."},
+      {q:`Recibís una query que usa OR para filtrar:<br><code>SELECT * FROM usuarios WHERE pais = 'Argentina' OR pais = 'Uruguay' OR pais = 'Chile'</code><br><br>Reescribila de 2 formas más eficientes y explicá cuándo usarías UNION ALL en su lugar.`,kw:["in","union all"],hint:"Opción 1: WHERE pais IN ('Argentina','Uruguay','Chile'). Opción 2: UNION ALL — usalo cuando cada rama tiene sus propios índices o condiciones muy distintas.",ok:"Muy bien! IN es más legible que múltiples OR y el optimizador lo maneja mejor. UNION ALL es útil cuando cada rama tiene su propio plan de ejecución óptimo."},
+    ]
+  },
 ];
 
-const done=new Set();let cur=0,tab='learn';
+const done = {};
+LS.forEach(l => { done[l.id] = new Set(); });
+let cur = 0, curEx = 0, tab = 'learn';
 
-function render(){
-  const l=LS[cur];
-  document.getElementById('ltitle').textContent=l.title;
-  const b=document.getElementById('lbadge');
-  b.textContent=l.badge==='med'?'Nivel medio':'Nivel avanzado';
-  b.className='badge '+(l.badge==='med'?'bmed':'badv');
-  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&tab==='learn')||(i===1&&tab==='exercise')));
-  const c=document.getElementById('tcontent');
-  if(tab==='learn'){
-    c.innerHTML=`<div class="btext">${l.theory}</div>
-    <div style="font-size:13px;font-weight:500;color:var(--text-sec);margin:10px 0 4px"><i class="ti ti-code" aria-hidden="true"></i> Ejemplo:</div>
-    <div class="sqlblock">${l.ex}</div>
-    <div style="margin-top:12px;padding:9px 13px;background:var(--teal-light);border-radius:8px;font-size:13px;color:var(--teal-mid)">
-      <i class="ti ti-arrow-right" aria-hidden="true"></i> Tocá <b>Ejercicio</b> para practicar.</div>`;
+function render() {
+  const l = LS[cur];
+  document.getElementById('ltitle').textContent = l.title;
+  const b = document.getElementById('lbadge');
+  b.textContent = l.badge === 'med' ? 'Nivel medio' : 'Nivel avanzado';
+  b.className = 'badge ' + (l.badge === 'med' ? 'bmed' : 'badv');
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active',(i===0&&tab==='learn')||(i===1&&tab==='exercise')));
+
+  const c = document.getElementById('tcontent');
+  if (tab === 'learn') {
+    c.innerHTML = `<div class="btext">${l.theory}</div>
+    <div style="font-size:13px;font-weight:500;color:var(--text-sec);margin:10px 0 4px">📝 Ejemplo:</div>
+    <div class="sqlblock">${l.example}</div>
+    <div style="margin-top:12px;padding:10px 14px;background:var(--teal-light);border-radius:8px;font-size:13px;color:var(--teal-mid)">
+      → Tocá <b>Ejercicios</b> para practicar con 5 ejercicios de dificultad progresiva.</div>`;
   } else {
-    c.innerHTML=`<div style="font-size:13px;font-weight:500;color:var(--text-sec);margin-bottom:8px"><i class="ti ti-pencil" aria-hidden="true"></i> Ejercicio ${l.id+1} de ${LS.length}</div>
-    <div class="exbox">${l.exercise}</div>
-    <div style="font-size:12px;color:var(--text-muted)">Escribí tu solución abajo y tocá Ejecutar.</div>`;
+    renderExercise();
   }
-  const pct=Math.round(done.size/LS.length*100);
-  document.getElementById('pfill').style.width=pct+'%';
-  document.getElementById('pbadge').textContent=`${done.size} / ${LS.length}`;
-  document.getElementById('navtxt').textContent=`Lección ${cur+1} de ${LS.length}`;
-  document.getElementById('bprev').style.visibility=cur===0?'hidden':'visible';
+
+  // Progress
+  const totalEx = LS.reduce((a,l) => a + l.exercises.length, 0);
+  const totalDone = LS.reduce((a,l) => a + done[l.id].size, 0);
+  const pct = Math.round(totalDone / totalEx * 100);
+  document.getElementById('pfill').style.width = pct + '%';
+  document.getElementById('pbadge').textContent = pct + '%';
+  document.getElementById('navtxt').textContent = `Tema ${cur+1} de ${LS.length}`;
+  document.getElementById('bprev').style.visibility = cur === 0 ? 'hidden' : 'visible';
+  const nextBtn = document.getElementById('btn-next');
+  if (tab === 'exercise' && curEx < LS[cur].exercises.length - 1) {
+    nextBtn.textContent = 'Siguiente ejercicio →';
+  } else {
+    nextBtn.textContent = 'Siguiente tema →';
+  }
   renderSidebar();
 }
 
-function renderSidebar(){
-  const sb=document.getElementById('sbinner');
-  const ms=document.getElementById('mstrip');
-  const mods={};
-  LS.forEach(l=>{if(!mods[l.mod])mods[l.mod]=[];mods[l.mod].push(l);});
-  sb.innerHTML='';ms.innerHTML='';
-  Object.entries(mods).forEach(([m,ls])=>{
-    const g=document.createElement('div');
-    g.innerHTML=`<div class="mod-label">${m}</div>`;
-    ls.forEach(l=>{
-      const btn=document.createElement('button');
-      btn.className='lbtn'+(l.id===cur?' active':'');
-      btn.innerHTML=`<span class="num">Lección ${l.id+1}</span>${l.title}${done.has(l.id)?'<span class="chk">✓</span>':''}`;
-      btn.onclick=()=>loadLesson(l.id);
+function renderExercise() {
+  const l = LS[cur];
+  const ex = l.exercises[curEx];
+  const c = document.getElementById('tcontent');
+  let dots = '';
+  l.exercises.forEach((_, i) => {
+    const cls = done[cur].has(i) ? 'done' : (i === curEx ? 'active' : '');
+    dots += `<button class="ex-dot ${cls}" onclick="goEx(${i})">${i+1}</button>`;
+  });
+  c.innerHTML = `
+    <div class="ex-nav">
+      ${dots}
+      <span class="ex-label">${done[cur].size}/${l.exercises.length} completados</span>
+    </div>
+    <div class="exbox">${ex.q}</div>
+    <div style="font-size:12px;color:var(--text-muted)">Escribí tu solución SQL abajo y tocá Ejecutar.</div>`;
+}
+
+function goEx(i) {
+  curEx = i;
+  document.getElementById('rarea').innerHTML = '';
+  document.getElementById('sqlin').value = '';
+  renderExercise();
+  render();
+}
+
+function renderSidebar() {
+  const sb = document.getElementById('sbinner');
+  const ms = document.getElementById('mstrip');
+  const mods = {};
+  LS.forEach(l => { if (!mods[l.mod]) mods[l.mod]=[]; mods[l.mod].push(l); });
+  sb.innerHTML = ''; ms.innerHTML = '';
+  Object.entries(mods).forEach(([m, ls]) => {
+    const g = document.createElement('div');
+    g.innerHTML = `<div class="mod-label">${m}</div>`;
+    ls.forEach(l => {
+      const allDone = done[l.id].size === l.exercises.length;
+      const btn = document.createElement('button');
+      btn.className = 'lbtn' + (l.id===cur?' active':'');
+      btn.innerHTML = `<span class="num">Tema ${l.id+1} · ${done[l.id].size}/${l.exercises.length}</span>${l.title}${allDone?'<span class="chk">✓</span>':''}`;
+      btn.onclick = () => loadLesson(l.id);
       g.appendChild(btn);
-      const mc=document.createElement('button');
-      mc.className='mchip'+(l.id===cur?' active':'');
-      mc.textContent=`${l.id+1}. ${l.title}`;
-      mc.onclick=()=>loadLesson(l.id);
+      const mc = document.createElement('button');
+      mc.className = 'mchip' + (l.id===cur?' active':'');
+      mc.textContent = `${l.id+1}. ${l.title}`;
+      mc.onclick = () => loadLesson(l.id);
       ms.appendChild(mc);
     });
     sb.appendChild(g);
   });
 }
 
-function loadLesson(id){cur=id;tab='learn';document.getElementById('rarea').innerHTML='';document.getElementById('sqlin').value='';render();window.scrollTo({top:0,behavior:'smooth'});}
-function switchTab(t){tab=t;render();}
-function runQuery(){
-  const sql=document.getElementById('sqlin').value.trim().toLowerCase();
-  const l=LS[cur];const ra=document.getElementById('rarea');
-  if(!sql){ra.innerHTML='<div class="result rerr">Escribí una consulta antes de ejecutar.</div>';return;}
-  const m=l.kw.filter(k=>sql.includes(k));
-  if(m.length/l.kw.length>=0.7){done.add(cur);ra.innerHTML=`<div class="result rok"><b>✓ ¡Correcto!</b> ${l.ok}</div>`;renderSidebar();}
-  else{const miss=l.kw.filter(k=>!sql.includes(k));ra.innerHTML=`<div class="result rerr"><b>No del todo.</b> Parece que falta: <code>${miss.join(', ')}</code>. Revisá y probá de nuevo.</div>`;}
+function loadLesson(id) {
+  cur = id; curEx = 0; tab = 'learn';
+  document.getElementById('rarea').innerHTML = '';
+  document.getElementById('sqlin').value = '';
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-function showHint(){document.getElementById('rarea').innerHTML=`<div class="result rhint"><b>Pista:</b> ${LS[cur].hint}</div>`;}
-function nextLesson(){if(cur<LS.length-1)loadLesson(cur+1);}
-function prevLesson(){if(cur>0)loadLesson(cur-1);}
+
+function switchTab(t) { tab = t; if(t==='exercise'){curEx=0;} render(); }
+
+function runQuery() {
+  const sql = document.getElementById('sqlin').value.trim().toLowerCase();
+  const l = LS[cur];
+  const ex = l.exercises[curEx];
+  const ra = document.getElementById('rarea');
+  if (!sql) { ra.innerHTML = '<div class="result rerr">Escribí una consulta antes de ejecutar.</div>'; return; }
+  const matched = ex.kw.filter(k => sql.includes(k.toLowerCase()));
+  if (matched.length / ex.kw.length >= 0.65) {
+    done[cur].add(curEx);
+    ra.innerHTML = `<div class="result rok"><b>✓ ¡Correcto!</b> ${ex.ok}</div>`;
+    render();
+  } else {
+    const miss = ex.kw.filter(k => !sql.includes(k.toLowerCase()));
+    ra.innerHTML = `<div class="result rerr"><b>Revisá tu consulta.</b> Parece que falta: <code>${miss.join(', ')}</code></div>`;
+  }
+}
+
+function showHint() {
+  const ex = LS[cur].exercises[curEx];
+  document.getElementById('rarea').innerHTML = `<div class="result rhint"><b>Pista:</b> ${ex.hint}</div>`;
+}
+
+function nextAction() {
+  if (tab === 'exercise' && curEx < LS[cur].exercises.length - 1) {
+    goEx(curEx + 1);
+  } else {
+    nextLesson();
+  }
+}
+
+function nextLesson() { if (cur < LS.length-1) loadLesson(cur+1); }
+function prevLesson() { if (cur > 0) loadLesson(cur-1); }
 
 render();
 </script>
